@@ -15,7 +15,12 @@ func (m model) View() tea.View {
 
 func (m model) viewString() string {
 	if m.screen == screenSplash {
-		return m.screenView()
+		content := m.splashView()
+		if m.width <= 0 || m.height <= 0 {
+			return content
+		}
+
+		return lipgloss.Place(m.width, m.height, lipgloss.Center, lipgloss.Center, content)
 	}
 
 	return m.dashboardView()

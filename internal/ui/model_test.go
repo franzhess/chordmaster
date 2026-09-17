@@ -123,6 +123,27 @@ func TestSplashCanBeSkipped(t *testing.T) {
 	}
 }
 
+func TestSplashIsCenteredInTerminal(t *testing.T) {
+	m := NewModel().(model)
+	m.width = 120
+	m.height = 40
+
+	lines := strings.Split(viewString(m), "\n")
+	firstContentLine := 0
+	for firstContentLine < len(lines) && strings.TrimSpace(lines[firstContentLine]) == "" {
+		firstContentLine++
+	}
+	if firstContentLine == 0 {
+		t.Fatal("splash is not vertically centered")
+	}
+	if firstContentLine == len(lines) {
+		t.Fatal("splash content is missing")
+	}
+	if leading := len(lines[firstContentLine]) - len(strings.TrimLeft(lines[firstContentLine], " ")); leading == 0 {
+		t.Fatal("splash is not horizontally centered")
+	}
+}
+
 func TestMainMenuOpensChordBrowser(t *testing.T) {
 	m := NewModel().(model)
 	m.screen = screenMainMenu
