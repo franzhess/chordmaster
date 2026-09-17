@@ -1,6 +1,18 @@
 # Chordmaster
 
+```text
+   ____ _                     _                     _
+  / ___| |__   ___  _ __   __| |_ __ ___   __ _ ___| |_ ___ _ __
+ | |   | '_ \ / _ \| '__| / _` | '_ ` _ \ / _` / __| __/ _ \ '__|
+ | |___| | | | (_) | |   | (_| | | | | | | (_| \__ \ ||  __/ |
+  \____|_| |_|\___/|_|    \__,_|_| |_| |_|\__,_|___/\__\___|_|
+```
+
+When I started learning how to play guitar, I stumbled over music theory and my head almost exploded. I really struggled to keep all the scales, chords and progressions - and their relations - in my head. So I decided to make a little tool that helps me to explore my instrument.
+
 Chordmaster is an interactive terminal app for exploring music theory on guitar. Browse scales, chords, progressions, and riffs; inspect guitar fretboards and chord tabs; and hear selections with generated audio playback.
+
+Currently only guitar is supported, but maybe I'll add piano and ukulele in the future.
 
 ## Requirements
 
@@ -36,6 +48,8 @@ go run .
 
 Choose a root and scale pattern, then inspect the resulting notes on a guitar fretboard. The scale screen also shows scale-derived chord cards so you can hear how the scale harmonizes.
 
+![Scale explorer](docs/screenshots/scales.png)
+
 Useful actions:
 
 - Use `h` / `l` to change the selected root or pattern.
@@ -47,6 +61,8 @@ Useful actions:
 
 Choose a root and chord variation, then browse the available guitar voicings for that chord. Chord diagrams can show either note names or finger numbers.
 
+![Chord browser](docs/screenshots/chords.png)
+
 Useful actions:
 
 - Use `h` / `l` to change the selected root or variation.
@@ -56,6 +72,8 @@ Useful actions:
 ### Work With Progressions
 
 Combine a scale, progression pattern, and rhythm pattern. Chordmaster resolves the progression into concrete chords, shows guitar chord cards for the result, and can play the timed chord sequence.
+
+![Progression explorer](docs/screenshots/progressions.png)
 
 Useful actions:
 
