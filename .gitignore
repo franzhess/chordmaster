@@ -1,0 +1,30 @@
+# Go build artifacts
+/chordmaster
+/bin/
+/dist/
+/build/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+
+# Go test and coverage output
+*.out
+coverage.*
+
+# Go workspace files
+go.work
+go.work.sum
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
